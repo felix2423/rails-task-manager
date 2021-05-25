@@ -10,9 +10,9 @@
   <br>
   <br>
 
-  <%= link_to 'Update task', edit_task_path %>
+  <%= link_to 'Update task', edit_task_path, :class => "btn btn-secondary mt-1 mb-1" %>
   <br>
-  <%= link_to 'Back to tasks', tasks_path %>
+  <%= link_to 'Back to tasks', tasks_path, :class => "btn btn-secondary mt-1 mb-1" %>
   <br>
-  <%= link_to 'Delete task', task_path(@task), method: :delete, data: {confirm: 'Are you sure?'} %>
+  <%= link_to 'Delete task', task_path(@task), method: :delete, data: {confirm: 'Are you sure?'}, :class => "btn btn-secondary mt-1 mb-1" %>
 </div>

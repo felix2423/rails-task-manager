@@ -1,14 +1,14 @@
 <div class="container">
   <h1>My tasks</h1>
 
-  <%= link_to 'Create new task', task_new_path %>
+  <%= link_to 'Create new task', task_new_path, :class => "btn btn-secondary mt-3 mb-3"%>
 
   <ul>
     <% @tasks.each do |task| %>
       <% if task.completed == false  %>
-        <li><i class="far fa-square"></i>&nbsp &nbsp<%= link_to task.title, task_path(task.id) %></li>
+        <li class="bg-secondary"><i class="far fa-square"></i>&nbsp &nbsp<%= link_to task.title, task_path(task.id), :class => "text-white" %></li>
       <% else %>
-        <li><i class="far fa-check-square"></i>&nbsp &nbsp<%= link_to task.title, task_path(task.id) %></li>
+        <li class="bg-secondary"><i class="far fa-check-square"></i>&nbsp &nbsp<%= link_to task.title, task_path(task.id), :class => "text-white" %></li>
       <% end %>
     <% end %>
   </ul>
